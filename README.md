@@ -49,51 +49,7 @@ This project demonstrates a lightweight **RAG (Retrieval-Augmented Generation)**
   - `title`: Article title  
   - `article`: Article content  
 
----
 
-## 🚀 Getting Started
-
-### 1. Clone Dataset and Install Dependencies
-'''python
-!git clone https://github.com/AshishJangra27/datasets/
-!pip install llama-index
-!pip install chromadb
-'''
-
-### 2. Preprocess and Chunk Articles
-- Clean and normalize content  
-- Chunk articles using LlamaIndex with overlap  
-
-### 3. Generate Embeddings and Store in ChromaDB
-- Use `SentenceTransformer("all-MiniLM-L6-v2")`  
-- Persist vectors to local or remote Chroma index  
-
-### 4. Search and Answer Queries
-- Use vector similarity to get top-k matches  
-- Pass the chunks as context to Gemini  
-- Generate response  
-
----
-
-## 💬 Example Usage
-
-'''python
-query = "What is a transformer model?"
-response = answer_with_gemini(query)
-print(response.text)
-'''
-
----
-
-## 📦 Output Files
-
-- `data.csv`: Raw dataset  
-- `articles.json`: Cleaned articles  
-- `chunks.json`: Chunked articles  
-- `chroma_index`: Stored vectors in Chroma  
-- `query_logs.json`: Query and usage trace  
-
----
 
 ## 💡 Use Cases
 
@@ -101,16 +57,6 @@ print(response.text)
 - Internal Q&A for enterprise docs  
 - GenAI prototypes for educational content  
 - Developer tools and codebase indexing  
-
----
-
-## ✅ Final Notes
-
-This notebook offers an end-to-end RAG pipeline:
-- 100K+ chunks, fast retrieval, real-time LLM answers  
-- Easily plug in your own documents  
-- Extend to production or API-based deployment  
-
 
 
 Tech Stack: LlamaIndex · ChromaDB · Gemini · HuggingFace
